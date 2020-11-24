@@ -33,7 +33,7 @@ function draw() {
     wallLeftEdge = lwall.x;
     if(bulletRightEdge>=wallLeftEdge)
     {
-      return true;
+     return true;
     } 
       return false;
     }
