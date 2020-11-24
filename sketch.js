@@ -9,7 +9,7 @@ function setup() {
   bullet = createSprite(50,200,50,50);
   bullet.shapeColor = "cyan";
   bullet.velocityX = speed;
-  wall = createSprite(1200,200,thickness,height/2);
+  wall = createSprite(1000,200,thickness,height/2);
   wall.shapeColor = "white";
 }
 
@@ -28,9 +28,9 @@ function draw() {
     }
   }
 
-  function hasCollided(lbullet,lwall){
-    bulletRightEdge = lbullet.x+lbullet.width;
-    wallLeftEdge = lwall.x;
+  function hasCollided(bullet,wall){
+    bulletRightEdge = bullet.x+bullet.width;
+    wallLeftEdge = wall.x;
     if(bulletRightEdge>=wallLeftEdge)
     {
      return true;
