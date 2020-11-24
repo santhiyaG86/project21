@@ -17,7 +17,7 @@ function setup() {
 function draw() {
   background(0);  
   //console.log(wall.x-bullet.x)
-  if (hasCollided(bullet,wall)){
+  if (hasCollided(lbullet,lwall)){
     bullet.velocityX = 0;
     var damage = 0.5*weight*speed*speed/(thickness*thickness*thickness);
     if (damage>10){
@@ -28,9 +28,9 @@ function draw() {
     }
   }
 
-  function hasCollided(bullet,wall){
-    bulletRightEdge = bullet.x+bullet.width;
-    wallLeftEdge = wall.x;
+  function hasCollided(lbullet,lwall){
+    bulletRightEdge = lbullet.x+lbullet.width;
+    wallLeftEdge = lwall.x;
     if(bulletRightEdge>=wallLeftEdge)
     {
      return true;
